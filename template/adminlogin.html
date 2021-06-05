@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> Login </title>
+		<link rel="stylesheet" href="../static/style.css">		
+	</head>
+	<body></br><h1 align="center">COMPLAINT ISSUE FORM</h1>
+	
+		<div align="center">
+		<div align="center" class="border">
+			<div class="header">
+				<h2 class="word">Admin Login</h2>
+			</div></br>
+			<h2 class="word">
+				<form action="{{ url_for('admindashboard')}}" method="post">
+				<table align="center">
+					<tr><td class="word">Email</td><td> <input id="useremail" name="useremail" type="text" placeholder="Enter Your UserId" class="textbox" required/></td></tr>
+					<tr><td class="word">Password</td><td><input id="password" name="password" type="password" placeholder="Enter Your Password" class="textbox" required/></td></tr>
+				</table></br>
+					<input type="submit" class="btn" value="Sign In"></br>
+				</form>
+			
+		</div>
+		</div>
+	</body>
+</html>

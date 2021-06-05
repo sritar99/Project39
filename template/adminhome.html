@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+</head>
+
+<body>
+                <h1>Complaint Portal</h1>
+            </div>
+        </div>
+    </nav>
+    <!-- <h2>Hello!! {{loginname}}</h2>
+    <h4> Profile Info:</h4>       
+    <h5> User Id : {{loginid}}</h5>
+        <div class="form" align="center">
+            <form class="login-form" action="{{ url_for('admindashboard') }}" method="post">
+                <input type="text" name="complaintId" id="complaintId" placeholder="Complaint ID...." /></br></br>
+                <input type="text" name="revisestatus" id="revisestatus" placeholder="Update Status...." /></br></br>
+                <input type="submit" value="Update"></br></br>
+                <input type="Button" value="Logout"><a href="{{ url_for('adminlogout') }}"></a></br></br>
+           
+            </form>
+    </div>
+  
+    <table width="800px" style="margin-top: -10px; align-self: center;">
+   <hr style="margin-top: -50px;">
+        <thead>
+            <tr>
+                <th scope="col">#Complaint ID</th>
+                <th scope="col">Category </th>
+                <th scope="col">Issue</th>
+                <th scope="col">Resolver Name</th>
+                <th scope="col">Resolver Email</th>
+                <th scope="col">Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in value %}
+            <tr>
+                <th scope="row">{{row['compid']}}</th>
+                <td>{{row['type']}}</td>
+                <td>{{row['desc']}}</td>
+                <td>{{row['offname']}}</td>
+                <td>{{row['offemail']}}</td>
+                <td>{{row['status']}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table> -->
+</body>
+
+</html>

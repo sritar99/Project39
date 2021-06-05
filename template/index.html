@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> Register </title>
+		<link rel="stylesheet" href="../static/style.css"/>			
+	</head>
+	<body></br></br><h1 align="center">COMPLAINT ISSUE FORM</h1>
+		<div align="center">
+		<div align="center" class="border">
+			<div class="header">
+				<h1 class="word">Register</h1>
+			</div></br>
+			<h2 class="word">
+				<form action="{{ url_for('register')}}" method="post">
+				<div class="msg">{{ msg }}</div><table align="center">
+					<tr><td class="word">User ID</td><td><input id="userid" name="userid" type="text" placeholder="Enter Your ID" class="textbox" required/></td></tr>
+					<tr><td class="word">User Name</td><td><input id="username" name="username" type="text" placeholder="Enter Your Username" class="textbox" required/></td></tr>
+					<tr><td class="word">Department</td><td><input id="dept" name="dept" type="text" placeholder="Enter Your Department Name" class="textbox"required/></td></tr>
+					<tr><td class="word">Phone No</td><td><input id="mobile" name="mobile" type="text" placeholder="Enter Your Phone No" class="textbox"required/></td></tr>
+					<tr><td class="word">Password</td><td><input id="password" name="password" type="password" placeholder="Enter Your Password" class="textbox"required/></td></tr></table>
+					<input type="submit" class="btn" value="Sign Up"></br>
+				</form>
+			</h2>
+			<p class="bottom">Already have an account? <a class="bottom" href="{{ url_for('login')}}"> Sign In here</a></p>
+		</div>
+		</div>
+	</body>
+</html>

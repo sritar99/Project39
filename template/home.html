@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+                <a href="#">Complaint Portal</a>
+       <h2>Hello!! {{loginname}}</h2>
+    <h4> Profile Info:</h4>
+    <h5> User Id : {{loginid}}</h5>
+    <h5> Department : {{dept}}</h5></br>
+        <div class="form" align="center">
+            <form action="{{ url_for('complaints') }}" method="post">
+                <label for="Category">Issue Type:</label>
+                <select id="Category" name="Category">
+<option value="default">Select an issue</option>
+                    <option value="water">Water</option>
+                    <option value="electricity">Power</option>
+                    <option value="woodwork">Wood Work</option>
+                </select></br></br>
+                <input type="text" name="issuedesc" id="issuedesc" placeholder="Description" required /></br></br>
+             <input type="submit" class="submitbutton" value="Raise Issue"></br></br></br>
+            </form>
+</div>
+</br></br>
+<hr style="margin-top: -50px;">
+    <table width="800px" style="margin-top: -10px; align-self: center;">
+        <thead>
+            <tr>
+                <th scope="col">#Complaint ID</th>
+                <th scope="col">Category </th>
+                <th scope="col">Issue</th>
+                <th scope="col">Resolver Name</th>
+                <th scope="col">Resolver Email</th>
+                <th scope="col">Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in value %}
+            <tr>
+                <th scope="row">{{row['compid']}}</th>
+                <td>{{row['type']}}</td>
+                <td>{{row['desc']}}</td>
+                <td>{{row['offname']}}</td>
+                <td>{{row['offemail']}}</td>
+                <td>{{row['status']}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+
+</html>
